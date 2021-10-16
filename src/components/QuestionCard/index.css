@@ -1,0 +1,47 @@
+.QuestionCard {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  grid-template-columns: 1fr;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.QuestionCard > * {
+  padding: 12px;
+  text-align: center;
+}
+
+.QuestionCard-category {
+  grid-area: 1/1/2/2;
+  font-weight: bold;
+}
+
+.QuestionCard-question {
+  grid-area: 2/1/3/2;
+}
+
+.QuestionCard-position {
+  grid-area: 3/1/4/2;
+}
+
+.QuestionCard-buttons {
+  grid-area: 4/1/5/2;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 12px;
+}
+
+.QuestionCard-buttons-true {
+  grid-area: 1/1/2/2; 
+}
+
+.QuestionCard-buttons-false {
+  grid-area: 1/2/2/3; 
+}
+
+.QuestionCard-buttons-submit {
+  grid-area: 2/1/3/3; 
+}

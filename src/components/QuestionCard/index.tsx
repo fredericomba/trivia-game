@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.css';
 
 export interface CallBacksQuestionCard {
   clickSubmit: (answer: undefined | boolean) => void;
@@ -58,19 +59,15 @@ export const ComponentQuestionCard : React.FC<PropsQuestionCard> = (props) => {
         <span>{ labelPosition }</span>
       </div>
       <div className="QuestionCard-buttons">
-        <div>
-          <button onClick={ clickTrue }>
-            <span>{ labelTrue }</span>
-          </button>
-          <button onClick={ clickFalse }>
-            <span>{ labelFalse }</span>
-          </button>
-        </div>
-        <div>
-          <button onClick={ clickSubmit }>
-            <span>{ labelSubmit }</span>
-          </button>
-        </div>
+        <button className="QuestionCard-buttons-true" onClick={ clickTrue }>
+          <span>{ labelTrue }</span>
+        </button>
+        <button className="QuestionCard-buttons-false" onClick={ clickFalse }>
+          <span>{ labelFalse }</span>
+        </button>
+        <button className="QuestionCard-buttons-submit" onClick={ clickSubmit }>
+          <span>{ labelSubmit }</span>
+        </button>
       </div>
     </div>
   );
