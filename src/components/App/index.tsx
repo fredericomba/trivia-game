@@ -103,11 +103,13 @@ export const ComponentApp : React.FC<PropsApp> = () => {
         };
 
         const mainElement = (
-          <div>
-            <span>{ Constants.STRING_LOADING_FAIL_DONE }</span>
-            <button onClick={ resetAttempts }>
-              <span>{ Constants.STRING_LOADING_TRY_AGAIN }</span>
-            </button>
+          <div className="App-center-contents App-nowrap">
+            <div className="App-retry-prompt">
+              <span>{ Constants.STRING_LOADING_FAIL_DONE }</span>
+              <button onClick={ resetAttempts }>
+                <span>{ Constants.STRING_LOADING_TRY_AGAIN }</span>
+              </button>
+            </div>
           </div>
         );
 
@@ -120,7 +122,7 @@ export const ComponentApp : React.FC<PropsApp> = () => {
       case 'PHASE_LOADING': {
 
         const mainElement = (
-          <div>
+          <div className="App-center-contents App-nowrap">
             <span>{ Constants.STRING_LOADING }</span>
           </div>
         );
@@ -147,7 +149,7 @@ export const ComponentApp : React.FC<PropsApp> = () => {
       case 'PHASE_LOAD_FAIL': {
 
         const mainElement = (
-          <div>
+          <div className="App-center-contents App-nowrap">
             <span>{ Constants.STRING_LOADING_FAIL_RETRY }</span>
           </div>
         );
@@ -169,7 +171,7 @@ export const ComponentApp : React.FC<PropsApp> = () => {
       case 'PHASE_LOAD_PASS': {
 
         const mainElement = (
-          <div>
+          <div className="App-center-contents App-nowrap">
             <span>{ Constants.STRING_LOADING_PASS }</span>
           </div>
         );
