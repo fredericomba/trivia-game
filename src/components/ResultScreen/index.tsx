@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.css';
 
 export interface PropsListEntry {
   trivia: string;
@@ -13,10 +14,10 @@ const ComponentListEntry : React.FC<PropsListEntry> = (props) => {
 
   return (
     <div className="ResultScreen-list-entry">
-      <div>
+      <div className="ResultScreen-list-entry-icon">
         <span>{ icon }</span>
       </div>
-      <div>
+      <div className="ResultScreen-list-entry-trivia">
         <span>{ trivia }</span>
       </div>
     </div>

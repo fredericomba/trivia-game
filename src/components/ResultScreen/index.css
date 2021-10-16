@@ -1,0 +1,53 @@
+.ResultScreen {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.ResultScreen > * {
+  padding: 12px;
+  text-align: center;
+}
+
+.ResultScreen-score {
+  grid-area: 1/1/2/2;
+  font-weight: bold;
+}
+
+.ResultScreen-list {
+  grid-area: 2/1/3/2;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  align-self: stretch;
+  justify-self: stretch;
+}
+
+.ResultScreen-buttons {
+  grid-area: 3/1/4/2;
+}
+
+.ResultScreen-list-entry {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 12px;
+
+  align-items: center;
+  justify-items: center;
+}
+
+.ResultScreen-list-entry:nth-child(2n) {
+  background: lightgray;
+}
+
+.ResultScreen-list-entry-icon {
+  grid-area: 1/1/2/2;
+  font: bold 24px monospace;
+}
+
+.ResultScreen-list-entry-trivia {
+  grid-area: 1/2/2/3;
+}
